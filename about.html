@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="index-header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a>
+                    <li><a href="about.html">About</a>
+                    <li><a href="project.html">Projects</a>
+                    <li><a href="contact.html">Contact</a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/MyPhoto.jpg" width="500" height="700">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="Description">
+                        Hi, my name is Harry, I am 22 years old, and I live in Bristol.
+                        I am a game developer who is hugely passionate about games, and I yearn to turn my biggest hobby into my dream job.
+                        I attended the University of the west of England where I have been able to work on some great projects and boost my knowledge about game development.
+                        During this time, I have been able to take part in a few global game jams where I have been able to meet a lot of knowledgeable people and to learn from them.
+                        I do consider myself a forever student as I love to learn about the different aspects of games, and I have taught myself 3D Modeling and texturing to accompany my knowledge in game development.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-Links active-Link" onclick="openTab('Skills')">Skills</p>
+                        <p class="tab-Links" onclick="openTab('Experiance')">Experiance</p>
+                        <p class="tab-Links" onclick="openTab('Education')">Education</p>
+                    </div>
+                    <div class="tab-Contents active-Tab" id="Skills">
+                        <ul>
+                            <li><span>C#</span></li>
+                            <li><span>C++</span></li>
+                            <br>
+                            <li><span>DirectX 11</span></li>
+                            <li><span>SFML</span></li>
+                            <br>
+                            <li><span>Unity Engine</span></li>
+                            <li><span>Unreal Engine</span></li>
+                            <li><span>ASGE(university in house engine)</span></li>
+                            <br>
+                            <li><span>Maya</span></li>
+                            <li><span>Blender</span></li>
+                            <br>
+                            <li><span>Substance Painter</span></li>
+                            <li><span>Quixel Mixer</span></li>
+                            <li><span>Quixel Bridge</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-Contents" id="Experiance">
+                        <ul>
+                            <li><span>KFC Hengrove - October 2017 till September 2019</span></li>
+                            <br>
+                            <li><span>McDonalds - September 2019 till present</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-Contents" id="Education">
+                        <ul>
+                            <li><span>Computing Foundation Diploma - 2018 </span></li>
+                            <br>
+                            <li><span>Computing Extended Diploma - 2019</span></li>
+                            <br>
+                            <li><span>Bachelors degree in Games Technology - 2022</span></li>
+                            <br>
+                            <li><span>Masters degree in Commercial Games Development - 2023</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-Links");
+        var tabContents = document.getElementsByClassName("tab-Contents");
+
+        function openTab(tabName) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-Link");
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-Tab");
+            }
+            event.currentTarget.classList.add("active-Link");
+            document.getElementById(tabName).classList.add("active-Tab");
+        }
+
+    </script>
+</body>
+</html>
